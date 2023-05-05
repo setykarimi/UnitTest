@@ -15,12 +15,15 @@ const Navbar = () => {
         &:hover {
             border: 2px solid #e5e7eb
           }
+          @media (max-width:576px) {
+            display: none;
+          }
     `;
     return (
-        <header className="grid grid-cols-2 px-2 py-6">
-            <div className="flex gap-10 items-center">
-                <span className="text-blue-500 text-2xl font-bold">MORENT</span>
-                <div className="w-full border border-gray-300 rounded-full flex items-center justify-center gap-3 px-4 py-2 text-gray-600">
+        <header className="md:grid lg:grid-cols-2 md:grid-cols-3 gap-2 md:px-2 px-6 py-6 sticky top-0">
+            <div className="flex md:flex-row flex-col md:gap-10 gap-6 md:items-center lg:col-span-1 md:col-span-2 col-span-1">
+                <span className="text-blue-500 text-2xl font-bold text-left">MORENT</span>
+                <div className="w-full border border-gray-300 md:rounded-full rounded-lg flex items-center justify-center gap-3 px-4 py-2 text-gray-600 md:relative">
                     <SearchNormal1 size="20" />
                     <input
                         className="outline-none w-full placeholder:text-sm placeholder:text-gray-600"
@@ -28,7 +31,7 @@ const Navbar = () => {
                     />
                 </div>
             </div>
-            <div className="profile flex items-center gap-4 justify-end">
+            <div className="profile flex items-center gap-4 justify-end md:static absolute top-4 right-3">
                 <ProfileLinks to="/">
                     <Heart size="20" variant="Bold" />
                 </ProfileLinks>
