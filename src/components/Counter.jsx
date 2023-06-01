@@ -12,7 +12,7 @@ const Counter = ({ initialState }) => {
     }
 
     const resetHandler = () => {
-
+        setCounter(0)
     }
 
     const revertHandler = () => {
