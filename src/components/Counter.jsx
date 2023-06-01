@@ -8,7 +8,7 @@ const Counter = ({ initialState }) => {
     }
 
     const descrementHandler = () => {
-
+        setCounter(prv => --prv)
     }
 
     const resetHandler = () => {
