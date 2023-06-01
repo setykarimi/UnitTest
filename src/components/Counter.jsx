@@ -21,8 +21,8 @@ const Counter = ({ initialState }) => {
 
     return (
         <div>
-            <h2 className="">
-                Counter: <b>{counter}</b>
+            <h2 >
+                Counter: <b data-testid="count">{counter}</b>
             </h2>
             <div>
                 <button onClick={incrementHandler}>Increment</button>
