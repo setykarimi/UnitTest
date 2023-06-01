@@ -16,7 +16,7 @@ const Counter = ({ initialState }) => {
     }
 
     const revertHandler = () => {
-
+        setCounter(prv => prv * -1)
     }
 
     return (
