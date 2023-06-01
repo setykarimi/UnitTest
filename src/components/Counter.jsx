@@ -4,7 +4,7 @@ const Counter = ({ initialState }) => {
     const [counter, setCounter] = useState(initialState)
 
     const incrementHandler = () => {
-
+        setCounter(prv => ++prv)
     }
 
     const descrementHandler = () => {
@@ -18,7 +18,7 @@ const Counter = ({ initialState }) => {
     const revertHandler = () => {
 
     }
-    
+
     return (
         <div>
             <h2 className="">
