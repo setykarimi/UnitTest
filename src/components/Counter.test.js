@@ -26,9 +26,17 @@ describe(Counter, () => {
 
     it("count should be 0 if the restart button is clicked", () => {
         const { getByTestId, getByRole } = render(<Counter initialState={50} />)
-        const restartButton = getByRole("button", {name: "Reset"})
+        const restartButton = getByRole("button", { name: "Reset" })
         expect(Number(getByTestId('count').textContent)).toEqual(50)
         fireEvent.click(restartButton)
         expect(Number(getByTestId('count').textContent)).toEqual(0)
+    })
+
+    it("count should invert signs if the switch signs button is clicked", () => {
+        const { getByTestId, getByRole } = render(<Counter initialState={50} />)
+        const switchButton = getByRole('button', {name: "Revert"})
+        expect(Number(getByTestId('count').textContent)).toEqual(50)
+        fireEvent.click(switchButton)
+        expect(Number(getByTestId('count').textContent)).toEqual(-50)
     })
 })
